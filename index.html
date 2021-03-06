@@ -8,10 +8,14 @@
 		<meta name="referrer" content="strict-origin-when-cross-origin" />
 	</head>
 	<body>
-		<audio src="chime_rain.flac" autoplay controls></audio>
 		<script>
-			var audio = new Audio('chime_rain.flac');
-			audio.play();
+			const ht = document.querySelector('html');
+
+			function handl() {
+				var audio = new Audio('chime_rain.flac');
+				audio.play();
+			}
+			ht.addEventListener('click', handl);
 		</script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/5.1.3/pixi.min.js"></script>
 		<script type="module" src="hap.js"></script>
