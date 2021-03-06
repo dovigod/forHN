@@ -2,3 +2,12 @@ body {
 	margin: 0;
 	overflow: hidden;
 }
+
+audio {
+	position: absolute;
+	left: 43vw;
+
+	z-index: 10;
+	top: 40vh;
+	opacity: 0;
+}
