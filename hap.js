@@ -27,3 +27,11 @@ function animate() {
 	requestAnimationFrame(animate);
 }
 initPixi();
+
+function handler(event) {
+	var audio = new Audio('chime_rain.flac');
+	audio.play();
+}
+
+var htm = document.querySelector('html');
+htm.addEventListener('click', handler);
