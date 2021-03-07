@@ -4,7 +4,6 @@ var displacementSprite;
 var displacementFilter;
 function initPixi() {
 	app = new PIXI.Application({ width: window.innerWidth, height: window.innerHeight });
-	console.dir(PIXI);
 	document.body.appendChild(app.view);
 	var image = new PIXI.Sprite.from('heeni.jpeg');
 	image.width = window.innerWidth;
