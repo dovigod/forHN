@@ -10,14 +10,14 @@ function initPixi() {
 	image.height = window.innerHeight;
 	app.stage.addChild(image);
 
-	displacementSprite = new PIXI.Sprite.from('clouds.jpg');
+	displacementSprite = new PIXI.Sprite.from('raindrops.jpg');
 	displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
 	displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
 	app.stage.addChild(displacementSprite);
 	app.stage.filters = [displacementFilter];
 	app.renderer.view.style.transform = 'scale(1.02)';
-	displacementSprite.scale.x = 6;
-	displacementSprite.scale.y = 6;
+	displacementSprite.scale.x = 20;
+	displacementSprite.scale.y = 20;
 	animate();
 }
 function animate() {
