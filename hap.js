@@ -1,11 +1,11 @@
-var app;
+let app;
 
-var displacementSprite;
-var displacementFilter;
+let displacementSprite;
+let displacementFilter;
 function initPixi() {
 	app = new PIXI.Application({ width: window.innerWidth, height: window.innerHeight });
 	document.body.appendChild(app.view);
-	var image = new PIXI.Sprite.from('heeni.jpeg');
+	let image = new PIXI.Sprite.from('heeni.jpeg');
 	image.width = window.innerWidth;
 	image.height = window.innerHeight;
 	app.stage.addChild(image);
@@ -19,6 +19,9 @@ function initPixi() {
 	displacementSprite.scale.x = 20;
 	displacementSprite.scale.y = 20;
 	animate();
+
+	image.interactive = true;
+	image.on('pointerdown', handler);
 }
 function animate() {
 	displacementSprite.x += 10;
@@ -28,9 +31,10 @@ function animate() {
 initPixi();
 
 function handler(event) {
-	var audio = new Audio('chime_rain.flac');
+	const audio = new Audio('chime_rain.flac');
 	audio.play();
 }
-
-var htm = document.querySelector('html');
+/*
+const htm = document.querySelector('html');
 htm.addEventListener('click', handler);
+*/
