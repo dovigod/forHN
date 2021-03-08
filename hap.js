@@ -30,7 +30,7 @@ function initPixi() {
 	image.on('pointerdown', handler);
 	//image.on('click', clickHandler);
 }
-/*
+
 const clickHandler = (e) => {
 	const eSprite = new PIXI.Sprite.from('waterdrops2.jpg');
 	const eFilter = new PIXI.filters.DisplacementFilter(eSprite);
@@ -39,7 +39,7 @@ const clickHandler = (e) => {
 	eFilter.scale.x = 1;
 	eFilter.scale.y = 1;
 };
-*/
+
 function animate() {
 	displacementSprite.x += 10;
 	displacementSprite.y += 4;
