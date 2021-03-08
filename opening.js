@@ -1,4 +1,5 @@
 let opens = document.getElementById('entry');
+alert("heloo");
 
 function moveClouds(e) {
 	/* clouds 1 & 2 move to the left 
@@ -45,4 +46,5 @@ const openings = () => {
 	});
 };
 
-export default openings;
+
+openings();
